@@ -70,9 +70,9 @@ That is the reason why <code>s1==s2</code> is true.
 
 But if you create a String on the Heap instead:
 
-<code>String s3 = new String("a")</code>
-<code>System.out.println(s1==s3) //false</code>
-<code>System.out.println(s1.equals(s3)) //true</code>
+<code>String s3 = new String("a")</code>  
+<code>System.out.println(s1==s3) //false</code>  
+<code>System.out.println(s1.equals(s3)) //true</code>  
 
 So always use <em>equals</em> for Strings (and for Objects in general).
 
