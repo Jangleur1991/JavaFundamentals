@@ -35,3 +35,45 @@ Important commands:
         Write the class name and then Shift+Tab and then I.     
         Example: Duration Shift+Tab and then I.</li>
 </ul>
+
+## Strings
+
+Strings are immutable, which means that their state does not change after initialisation.
+So any method you call on a String will not change the String. 
+Instead, a completely new String is created.
+
+Example:  
+<code>String a = "a";</code>    
+<code>a.concat("b");</code>    
+<code>System.out.println(a); //Output: "a" </code> 
+
+Why are Strings immutable?
+You do not want to have side effects for strings.
+Strings sometimes contain important information like user names. 
+
+How to compare Strings?
+You should always use the <em>equals</em>
+method! For Strings a so called <em>String Pool</em> is used
+which means a new String is only generated if necessary.
+
+What this means can be seen in the following example:
+
+
+<code>String s1 = "a";</code>  
+<code>String s2 = "a";</code>
+
+
+<code>System.out.println(s1==s2)  //True</code>
+
+Only one String <code>"a"</code> is generated and used here.
+That is the reason why <code>s1==s2</code> is true. 
+
+But if you create a String on the Heap instead:
+
+<code>String s3 = new String("a")</code>
+<code>System.out.println(s1==s3) //false</code>
+<code>System.out.println(s1.equals(s3)) //true</code>
+
+So always use <em>equals</em> for Strings (and for Objects in general).
+
+
